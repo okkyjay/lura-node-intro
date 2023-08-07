@@ -1,0 +1,92 @@
+What is Node.js?
+Node.js is a server-side platform built on Google Chrome's 
+JavaScript Engine (V8 Engine). Node.js was developed by Ryan Dahl 
+in 2009 and its latest version is v0.10.36. The definition of 
+Node.js as supplied by its official documentation nodejs.org
+
+
+Node.js is a platform built on Chrome's JavaScript runtime for 
+easily building fast and scalable network applications. Node.js 
+uses an event-driven, non-blocking I/O model that makes it 
+lightweight and efficient, perfect for data-intensive
+ real-time applications that run across distributed devices.
+
+ Node.js is an open source, cross-platform runtime environment for developing 
+ server-side and networking applications. Node.js applications are written in 
+ JavaScript, and can be run within the Node.js runtime 
+ on OS X, Microsoft Windows, and Linux.
+
+Node.js also provides a rich library of various JavaScript modules which 
+simplifies the development of web applications using Node.js to a great extent.
+
+Features of Node.js
+ - Asynchronous and Event Driven
+ - Very Fast
+ - Single Threaded but Highly Scalable
+ - No Buffering 
+
+
+Where to Use Node.js?
+Following are the areas where Node.js is proving itself as a perfect 
+technology partner.
+
+I/O bound Applications
+Data Streaming Applications
+Data Intensive Real-time Applications (DIRT)
+JSON APIs based Applications
+Single Page Applications
+
+Where Not to Use Node.js?
+It is not advisable to use Node.js for CPU intensive applications.
+
+
+
+Setting up the environment
+ - Install nodejs
+ - get an IDE (vs code, webstorm, sublime, notepad, notepad++, etc)
+
+
+ First Application
+
+ - Components of node application
+ 
+ - Import required modules − We use the require directive to load Node.js modules.
+
+ - Create server − A server which will listen to client's requests similar to 
+    Apache HTTP Server.
+
+ - Read request and return response − The server created in an earlier step 
+    will read the HTTP request made by the client which can be a browser or 
+    a console and return the response.
+
+    - npm init - this command initialize a new nodejs application
+
+    Step 1
+    var http = require("http");
+
+    Step 2
+    http.createServer(function (request, response) {
+   // Send the HTTP header 
+   // HTTP Status: 200 : OK
+   // Content Type: text/plain
+   response.writeHead(200, {'Content-Type': 'text/plain'});
+   
+   // Send the response body as "Hello World"
+   response.end('Hello World\n');
+}).listen(8081);
+
+Step 3 - Testing Request & Response
+
+// Console will print the message
+console.log('Server running at http://127.0.0.1:8081/');
+
+
+
+REPL
+
+R - Read
+E - Eval
+P - print
+L - Loop
+
+node
